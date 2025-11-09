@@ -1,58 +1,97 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-body, * {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+  color: #2d3748;
+  padding: 2rem;
+  min-height: 100vh;
 }
-
-h1 {
-    margin: 1rem;
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  overflow: hidden;
 }
-
-.cards {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+header {
+  background: linear-gradient(120deg, #00c2cb, #0099cc);
+  color: white;
+  padding: 1.5rem 2rem;
+  text-align: center;
 }
-
-.card {
-    flex-basis: 31%;
-    margin: 1rem 0.4rem;
-    padding: 1rem 0.4rem 2.5rem 0.4rem;
-    border: solid 1px lightgrey;
-    border-radius: 15px;
-    box-shadow: 3px 2px 6px lightgrey;
+header h1 { font-size: 1.8rem; font-weight: 600; }
+main { padding: 2rem; }
+a { color: #00c2cb; text-decoration: none; font-weight: 500; }
+a:hover { color: #007a99; }
+.btn, button {
+  background: #00c2cb;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,194,203,0.2);
+  display: inline-block;
 }
-
-.card__email {
-    font-size: 1rem;
+.btn:hover, button:hover {
+  background: #0099cc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,194,203,0.3);
 }
-
-.form-wrapper {
-    font-size: 18px;
-    max-width: 768px;
-    margin: 2rem auto;
-    padding: 2rem;
-    border: solid 1px lightgrey;
-    border-radius: 15px;
-    box-shadow: 3px 2px 6px lightgrey;
+form {
+  background: #f8fafc;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  margin-top: 1.5rem;
 }
-
-label, input {
-    margin-top: 5px;
-    display: block;
-    font-size: inherit;
+form label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  font-weight: 600;
+  color: #4a5568;
 }
-
-input[type="text"] {
-    padding: .25rem;
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s ease;
 }
-
-input[type="submit"] {
-    background-color: lightgrey;
-    border: none;
-    padding: .375rem 1rem;
-    margin-top: 10px;
+form input:focus, form textarea:focus {
+  outline: none;
+  border-color: #00c2cb;
+  box-shadow: 0 0 0 3px rgba(0,194,203,0.1);
+}
+table {
+  width: 100%;
+  margin-top: 1.5rem;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+table th {
+  background: #00c2cb;
+  color: white;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+table tr:hover { background: #f1f9ff; }
+p { color: #718096; font-style: italic; text-align: center; margin-top: 2rem; }
+@media (max-width: 768px) {
+  body { padding: 1rem; }
+  header h1 { font-size: 1.5rem; }
+  main { padding: 1.5rem; }
 }
