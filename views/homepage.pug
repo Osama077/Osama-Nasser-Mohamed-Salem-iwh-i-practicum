@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    .container
+      header
+        h1= title
+      main
+        a.btn(href="/update-cobj") Add New School
+        if records && records.length > 0
+          table
+            thead
+              tr
+                th Name
+                th Address
+                th Graduation Date
+            tbody
+              each record in records
+                tr
+                  td= record.properties.name || '-'
+                  td= record.properties.address || '-'
+                  td= record.properties.graduationdate || '-'
+        else
+          p No schools added yet.
+          p Click "Add New School" to get started!

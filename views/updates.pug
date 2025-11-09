@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    .container
+      header
+        h1= title
+      main
+        a(href="/") ← Back to Schools List
+        form(method="POST" action="/update-cobj")
+          label(for="name") School Name *
+          input#name(type="text" name="name" required placeholder="e.g. Cairo International School")
+          
+          label(for="address") Address
+          input#address(type="text" name="address" placeholder="e.g. 5th Settlement, New Cairo")
+          
+          label(for="graduationdate") Graduation Date
+          input#graduationdate(type="text" name="graduationdate" placeholder="e.g. 2025-06-15")
+          
+          button(type="submit") Create School
